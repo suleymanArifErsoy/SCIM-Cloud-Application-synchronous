@@ -1,0 +1,212 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+  background-color: #f4f6f9;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  white-space: nowrap;
+  line-height: 60px;
+}
+
+/* SCIM Dashboard Styles */
+.small-box {
+  border-radius: 0.25rem;
+  box-shadow: 0 0 1px rgba(0,0,0,.125), 0 1px 3px rgba(0,0,0,.2);
+  display: block;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.small-box > .inner {
+  padding: 10px;
+}
+
+.small-box h3 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin: 0 0 10px 0;
+  padding: 0;
+  white-space: nowrap;
+}
+
+.small-box p {
+  font-size: 1rem;
+}
+
+.small-box .icon {
+  color: rgba(0,0,0,.15);
+  z-index: 0;
+}
+
+.small-box .icon > i {
+  font-size: 70px;
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  transition: transform .3s linear;
+}
+
+.small-box:hover .icon > i {
+  transform: scale(1.1);
+}
+
+.small-box > .small-box-footer {
+  background-color: rgba(0,0,0,.1);
+  color: rgba(255,255,255,.8);
+  display: block;
+  padding: 3px 0;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  z-index: 10;
+}
+
+.small-box > .small-box-footer:hover {
+  background-color: rgba(0,0,0,.15);
+  color: #fff;
+}
+
+.small-box > .small-box-footer > .fa,
+.small-box > .small-box-footer > .fas,
+.small-box > .small-box-footer > .far,
+.small-box > .small-box-footer > .fab,
+.small-box > .small-box-footer > .fal {
+  font-size: 12px;
+  margin-left: 5px;
+}
+
+/* Card Styles */
+.card {
+  box-shadow: 0 0 1px rgba(0,0,0,.125), 0 1px 3px rgba(0,0,0,.2);
+  margin-bottom: 1rem;
+}
+
+.card-header {
+  background-color: rgba(0,0,0,.03);
+  border-bottom: 1px solid rgba(0,0,0,.125);
+  padding: 0.75rem 1.25rem;
+  position: relative;
+}
+
+.card-title {
+  float: left;
+  font-size: 1.1rem;
+  font-weight: 400;
+  margin: 0;
+}
+
+.card-tools {
+  float: right;
+  margin-top: -0.25rem;
+}
+
+/* Table Styles */
+.table-responsive {
+  overflow-x: auto;
+}
+
+.table th {
+  border-top: 0;
+  font-weight: 600;
+}
+
+/* Badge Styles */
+.badge {
+  font-size: 0.75em;
+  font-weight: 600;
+  padding: 0.25em 0.6em;
+}
+
+/* Button Styles */
+.btn-group .btn {
+  margin-right: 2px;
+}
+
+.btn-block {
+  display: block;
+  width: 100%;
+}
+
+/* Custom Switch */
+.custom-switch .custom-control-label::before {
+  width: 2rem;
+  height: 1rem;
+  border-radius: 1rem;
+}
+
+.custom-switch .custom-control-label::after {
+  width: calc(1rem - 4px);
+  height: calc(1rem - 4px);
+  border-radius: calc(0.5rem - 2px);
+}
+
+.custom-switch .custom-control-input:checked ~ .custom-control-label::after {
+  transform: translateX(1rem);
+}
+
+/* Alert Styles */
+.alert-dismissible .close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 2;
+  padding: 0.75rem 1.25rem;
+  color: inherit;
+}
+
+/* Form Styles */
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.form-control:focus {
+  border-color: #80bdff;
+  box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25);
+}
+
+/* Custom Checkbox */
+.custom-checkbox .custom-control-input:checked ~ .custom-control-label::before {
+  background-color: #007bff;
+  border-color: #007bff;
+}
+
+.custom-checkbox .custom-control-input:checked ~ .custom-control-label::after {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%23fff' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3e%3c/svg%3e");
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .small-box h3 {
+    font-size: 1.8rem;
+  }
+  
+  .card-title {
+    font-size: 1rem;
+  }
+  
+  .btn-group .btn {
+    margin-bottom: 2px;
+  }
+}

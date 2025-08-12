@@ -1,0 +1,36 @@
+@model IEnumerable<SCIM_Application.Models.User>
+@{
+    ViewData["Title"] = "Kullanıcılar";
+}
+<h2>Kullanıcılar</h2>
+<p>
+    <a asp-action="Create" class="btn btn-primary">Yeni Kullanıcı</a>
+</p>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Kullanıcı Adı</th>
+            <th>Ad Soyad</th>
+            <th>E-posta</th>
+            <th>Aktif</th>
+            <th>Uygulamalar</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var u in Model)
+        {
+            <tr>
+                <td>@u.UserName</td>
+                <td>@u.FirstName @u.LastName</td>
+                <td>@u.Email</td>
+                <td>@(u.IsActive ? "Evet" : "Hayır")</td>
+                <td>@string.Join(", ", u.UserApplications.Where(ua => ua.IsActive).Select(ua => ua.Application.Name))</td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@u.Id" class="btn btn-sm btn-secondary">Düzenle</a>
+                    <a asp-action="Delete" asp-route-id="@u.Id" class="btn btn-sm btn-danger">Sil</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

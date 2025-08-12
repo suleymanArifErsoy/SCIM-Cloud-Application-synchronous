@@ -1,0 +1,19 @@
+@model SCIM_Application.Models.Application
+@{
+    ViewData["Title"] = "Uygulama Sil";
+}
+<h3>Bu uygulamayı silmek istediğinize emin misiniz?</h3>
+<div>
+    <h4>@Model.Name</h4>
+    <dl class="row">
+        <dt class="col-sm-2">Sağlayıcı</dt>
+        <dd class="col-sm-10">@Model.Provider</dd>
+        <dt class="col-sm-2">SCIM Endpoint</dt>
+        <dd class="col-sm-10">@Model.ScimEndpoint</dd>
+    </dl>
+</div>
+<form asp-action="Delete">
+    <input type="hidden" asp-for="Id" />
+    <button type="submit" class="btn btn-danger">Sil</button>
+    <a asp-action="Index" class="btn btn-secondary">İptal</a>
+</form>
